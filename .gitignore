@@ -123,3 +123,7 @@ _testmain.go
 
 # external packages folder
 vendor/
+
+## Installed packages:
+**/go/**/bin
+**/go/**/pkg
