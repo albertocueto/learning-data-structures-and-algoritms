@@ -1,6 +1,6 @@
-package numalgori
+package euclidesGcd
 
-func gcd(a int64, b int64) int64 {
+func Gcd(a int64, b int64) int64 {
   for b != 0 {
     remainder := a % b
     a = b
