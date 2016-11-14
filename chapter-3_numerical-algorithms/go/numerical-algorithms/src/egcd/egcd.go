@@ -1,4 +1,4 @@
-package euclidesGcd
+package egcd
 
 func Gcd(a int64, b int64) int64 {
   for b != 0 {
