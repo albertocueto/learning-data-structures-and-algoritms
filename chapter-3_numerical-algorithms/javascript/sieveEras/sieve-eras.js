@@ -11,9 +11,6 @@ function sieve(a, b) {
   }
   var arrayNumbers = [];
   //O(N)
-  if(a === 1) {
-    a++;
-  }
   for (var i = a; i <= b; i++) {
     arrayNumbers.push(i);
   }
@@ -33,6 +30,9 @@ function sieve(a, b) {
       count++;
     }
   }
+
+  if(arrayNumbers[0] == 1)
+    arrayNumbers[0] = null
   //console.log(JSON.stringify(arrayNumbers));
   //console.log(firstTwoIndex);
   //Remove all multiples of 2 for we know those are not primes:
@@ -46,7 +46,7 @@ function sieve(a, b) {
     //console.log(i + '? ' + isPrime(i));
     if(isPrime(arrayNumbers[i])) {
       //console.log(arrayNumbers[i] + ' is prime');
-      for (var multiple = (arrayNumbers[i] * arrayNumbers[i]); multiple <= arrayNumbers.length; multiple += 2 * arrayNumbers[i]) {
+      for (var multiple = (arrayNumbers[i] * arrayNumbers[i]); multiple <= arrayNumbers.length; multiple += 2 * i) {
         //console.log(multiple +': ' + arrayNumbers[multiple+1]);
         arrayNumbers[multiple] = null;
       }
